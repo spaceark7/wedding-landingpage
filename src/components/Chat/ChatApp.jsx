@@ -32,6 +32,8 @@ const ChatApp = ({ resetScroll }) => {
     const res = commentsList.find((comment) => comment.uid === user.uid)
     if (res?.uid) {
       setHideCommentBox(true)
+    } else {
+      setHideCommentBox(false)
     }
   }
 

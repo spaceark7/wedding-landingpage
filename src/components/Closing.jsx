@@ -4,7 +4,6 @@ import ChatApp from './Chat/ChatApp'
 const Closing = () => {
   const scrollReset = useRef()
   const resetPosition = () => {
-    console.log('scrolling')
     scrollReset.current.scrollTo({
       behavior: 'smooth',
       top: 0,
