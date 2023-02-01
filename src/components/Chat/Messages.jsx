@@ -1,6 +1,6 @@
 const Messages = ({ message }) => {
   return (
-    <div className='w-full border-b p-4'>
+    <div className='max-w-screen-sm border-b p-4 md:max-w-screen-md'>
       <div className='mb-2 flex items-center gap-x-2'>
         {message?.photoURL ? (
           <div className='relative h-11 w-11'>
@@ -29,7 +29,9 @@ const Messages = ({ message }) => {
           </p>
         </div>
       </div>
-      <div className='text-sm'>{message?.content}</div>
+      <div className='max-w-screen-sm break-words text-sm '>
+        {message?.content}
+      </div>
     </div>
   )
 }

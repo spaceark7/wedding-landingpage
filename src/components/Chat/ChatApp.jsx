@@ -64,11 +64,14 @@ const ChatApp = ({ resetScroll }) => {
     <div ref={commentBox} className='z-40 mx-auto max-w-screen-md px-8 pb-32'>
       {/* Chat Block */}
 
-      <div className='relative mt-6 h-full  w-full  rounded-xl border border-slate-100 bg-white pb-3  shadow-md'>
+      <div className='relative mt-6 h-full w-full rounded-xl   border border-slate-100 bg-white pb-3 shadow-md  '>
         <h2 className='sticky top-0 z-30 border-b bg-white p-4 font-display text-2xl font-semibold'>
           Their Best Wishes
         </h2>
-        <div ref={commentRef} className='max-h-[70vh] overflow-y-auto py-4'>
+        <div
+          ref={commentRef}
+          className='max-h-[70vh] w-full overflow-y-auto py-4'
+        >
           {commentsList &&
             commentsList.map((comment) => (
               <Messages key={comment.id} message={comment} />

@@ -10,7 +10,7 @@ const ThankComment = () => {
   }
   const { View } = useLottie(option)
   return (
-    <div className='mx-auto flex max-w-lg items-center gap-x-1 rounded-xl shadow-lg'>
+    <div className='mx-auto flex max-w-lg items-center gap-x-1 rounded-xl bg-white shadow-lg'>
       <div className='w-1/3'>{View}</div>
       <div className='w-2/3'>
         <h5 className='text-sm font-semibold text-slate-600'>

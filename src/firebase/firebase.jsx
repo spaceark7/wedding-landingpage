@@ -77,7 +77,7 @@ const getComments = (callback) => {
           id: doc.id,
 
           ...doc.data(),
-          createdAt: format(doc.data().createdAt.toDate(), 'PPPP | p', {
+          createdAt: format(doc.data().createdAt?.toDate(), 'PPPP | p', {
             locale: id,
           }),
         }))
