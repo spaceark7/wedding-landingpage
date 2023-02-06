@@ -55,9 +55,9 @@ const ChatApp = ({ resetScroll }) => {
       behavior: 'smooth',
     })
 
-    setLoadingSubmit(false)
     setHideCommentBox(true)
     setComment('')
+    setLoadingSubmit(false)
   }
 
   return (

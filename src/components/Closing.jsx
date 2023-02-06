@@ -53,7 +53,7 @@ const Closing = () => {
 
               <div className='relative flex h-full items-center justify-center md:w-1/2'>
                 <h2 className='text-center text-2xl font-medium text-white md:text-4xl'>
-                  Yubicom Server
+                  Cloud Firestore DB
                 </h2>
               </div>
             </div>

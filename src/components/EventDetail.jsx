@@ -4,6 +4,7 @@ import {
   MapIcon,
   MapPinIcon,
 } from '@heroicons/react/24/outline'
+import { useParallax } from 'react-scroll-parallax'
 
 const EventDetail = () => {
   const setReminder = () => {
@@ -18,9 +19,23 @@ const EventDetail = () => {
       '_blank'
     )
   }
+
+  // const parallaxEvent2 = useParallax({
+  //   speed: 0,
+  //   easing: 'easeOutCubic',
+  // })
+  const parallaxEvent3 = useParallax({
+    speed: 2,
+    easing: 'easeOutBack',
+  })
+  const parallaxEvent4 = useParallax({
+    speed: 10,
+    easing: 'easeOutCubic',
+  })
+
   return (
     <div className='relative my-12  min-h-screen '>
-      <div className='mb-4  pt-6'>
+      <div ref={parallaxEvent3.ref} className='mb-4 pt-6'>
         <div className=''>
           <img
             className='mx-auto h-12 w-12'
@@ -32,8 +47,14 @@ const EventDetail = () => {
 
         <h1 className='text-center text-2xl font-bold'>Detail Acara</h1>
       </div>
-      <div className='flex flex-col justify-between space-y-12  py-8'>
-        <div className='mx-auto w-full max-w-sm rounded-md border-b border-emerald-500 p-8'>
+      <div
+        ref={parallaxEvent4.ref}
+        className='flex flex-col justify-between space-y-12  py-8'
+      >
+        <div
+          // ref={parallaxEvent3.ref}
+          className='mx-auto w-full max-w-sm rounded-md border-b border-emerald-500 px-8 pb-4'
+        >
           <div className='flex  items-center  gap-y-3 '>
             <div className='mr-6 self-start rounded-md  p-2 '>
               <ClockIcon
@@ -69,7 +90,10 @@ const EventDetail = () => {
           </div>
         </div>
 
-        <div className='mx-auto w-full max-w-sm rounded-md  p-8'>
+        <div
+          // ref={parallaxEvent4.ref}
+          className='mx-auto w-full max-w-sm rounded-md px-8 pb-4'
+        >
           <div className='flex items-center  gap-y-3'>
             <div className='mr-6 self-start rounded-md  p-2'>
               <MapPinIcon

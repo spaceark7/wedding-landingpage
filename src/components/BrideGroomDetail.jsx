@@ -1,4 +1,20 @@
+import { useParallax } from 'react-scroll-parallax'
+
 const BrideGroomDetail = () => {
+  const parallaxMain = useParallax({
+    speed: 8,
+  })
+  const parallaxMainSub = useParallax({
+    speed: 20,
+    translateY: [0, -200],
+  })
+  const parallaxMain2 = useParallax({
+    speed: 10,
+  })
+  const parallaxMainSub2 = useParallax({
+    speed: 50,
+    translateY: [0, -200],
+  })
   return (
     <div className='my-12 min-h-screen '>
       <section>
@@ -23,15 +39,23 @@ const BrideGroomDetail = () => {
               <h4 className='text-3xl font-bold text-emerald-700'>
                 Hasbi Assidiqi
               </h4>
-              <p>Putra pertama dari Bapak Ahmad & Ibu Nain Nurhayati.</p>
+              <p>
+                Putra pertama dari Bapak Ahmad Koswara & Ibu Nain Nurhayati.
+              </p>
             </div>
-            <div className='h-4/5 object-left md:sticky lg:flex lg:h-screen lg:w-full lg:items-center'>
+            <div
+              ref={parallaxMain.ref}
+              className='h-4/5 object-left md:sticky lg:flex lg:h-screen lg:w-full lg:items-center'
+            >
               <img
                 className='z-10 mx-auto h-full w-full  rounded-xl  object-contain lg:max-w-screen-sm'
                 src='/images/hasbi.webp'
                 alt='hasbi dan rahmi'
               />
-              <div className='absolute left-1/2 top-1/2 -z-[2]  h-56 w-44 rounded-lg bg-emerald-700'></div>
+              <div
+                ref={parallaxMainSub.ref}
+                className='absolute left-1/2 top-1/2 -z-[2]  h-56 w-44 rounded-lg bg-emerald-700'
+              ></div>
             </div>
           </div>
           <div className=' flex items-center'>
@@ -49,13 +73,19 @@ const BrideGroomDetail = () => {
               </h4>
               <p>Putri kedua dari Bapak Rohman & Ibu Hasanah.</p>
             </div>
-            <div className='h-4/5 md:sticky lg:flex lg:h-screen lg:w-full lg:items-center'>
+            <div
+              ref={parallaxMain2.ref}
+              className='h-4/5 md:sticky lg:flex lg:h-screen lg:w-full lg:items-center'
+            >
               <img
                 className='z-10 mx-auto h-full w-full  rounded-xl  object-contain lg:max-w-screen-sm'
                 src='/images/rahmi_2.webp'
                 alt='hasbi dan rahmi'
               />
-              <div className='absolute left-1/4 top-1/2 -z-[2]  h-56 w-44 rounded-lg bg-emerald-700'></div>
+              <div
+                ref={parallaxMainSub2.ref}
+                className='absolute left-1/4 top-1/2 -z-[2]  h-56 w-44 rounded-lg bg-emerald-700'
+              ></div>
             </div>
           </div>
         </div>
